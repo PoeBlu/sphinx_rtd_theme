@@ -25,10 +25,10 @@ def build(root, builder='html', **kwargs):
     status = StringIO()
     warning = StringIO()
 
-    kwargs.update({
+    kwargs |= {
         'status': status,
         'warning': warning,
-    })
+    }
 
     confoverrides = kwargs.pop('confoverrides', {})
     confoverrides['html_theme'] = 'sphinx_rtd_theme'

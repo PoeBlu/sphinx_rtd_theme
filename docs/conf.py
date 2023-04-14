@@ -4,7 +4,7 @@ import sys
 import os
 import re
 
-if not 'READTHEDOCS' in os.environ:
+if 'READTHEDOCS' not in os.environ:
     sys.path.insert(0, os.path.abspath('..'))
 sys.path.append(os.path.abspath('./demo/'))
 
